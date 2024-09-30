@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ErrorCoin Game</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ErrorCoin Game</h1>
+            <p>Time Left: <span id="timer">60</span> seconds</p>
+            <p>Level: <span id="level">1</span></p>
+            <p>Total Mined Coins: <span id="total-mined-coins">0</span></p>
+        </header>
+
+        <main id="main-content">
+            <div id="mine" class="page">
+                <h2>Mine ErrorCoins</h2>
+                <img src="ErrorCoin.gif" alt="" id="mine-button"></img>
+                <p>Error Points: <span id="coins-mined">0</span></p>
+                <p>Score: <span id="score">0</span></p>
+                <p id="power-up-message"></p>
+                <div id="obstacle" class="hidden">🚫</div>
+            </div>
+
+            <div id="invitation" class="page" style="display: none;">
+                <h2>Invite Friends</h2>
+                <p>Invite your friends to earn more ErrorCoins!</p>
+                <button id="invite-button">Invite Friends</button>
+                <p>Invitations sent: <span id="invitations-sent">0</span></p>
+                <h3>Invited Friends List:</h3>
+                <ul id="invited-friends-list"></ul>
+                <a id="invite-link" href="#" target="_blank">Your Invite Link</a>
+            </div>
+
+            <!-- Task management system -->
+            <div id="tasks" class="page" style="display: none;">
+                <h2>Tasks</h2>
+                <p>Complete tasks to earn more ErrorCoins.</p>
+                <ul id="tasks-list">
+                    <li>
+                        Subscribe to our YouTube channel: 
+                        <button class="complete-task-button" data-url="https://www.youtube.com/" data-task="youtube">Complete</button>
+                    </li>
+                    <li>
+                        Join our Telegram group: 
+                        <button class="complete-task-button" data-url="https://t.me/" data-task="telegram">Complete</button>
+                    </li>
+                    <li>
+                        Follow us on Twitter: 
+                        <button class="complete-task-button" data-url="https://twitter.com/" data-task="twitter">Complete</button>
+                    </li>
+                </ul>
+                <p>Tasks completed: <span id="tasks-completed">0</span></p>
+            </div>
+            
+            
+
+            <div id="soon" class="page" style="display: none;">
+                <h2>Soon</h2>
+                <ul id="soon-list"></ul>
+            </div>
+        </main>
+
+        <!-- Invitation page code -->
+        <div id="invitation" class="page">
+            <h2 class="txt-1">Invite Friends</h2>
+            <p class="txt-1">Send invitations to your friends to join the game and earn rewards!</p>
+            
+            <button id="invite-button" class="invite-button">Invite a Friend</button>
+        
+            <h3>Invitation Link:</h3>
+            <p id="invitation-link"></p>
+        
+            <h3>Invitations Sent: <span id="invitations-sent">0</span></h3>
+            
+            <h3>Your Invited Friends</h3>
+            <ul id="invited-friends-list"></ul>
+        </div>
+        
+        
+        <footer>
+            <button class="nav-button" id="mine-nav">Mine</button>
+            <button class="nav-button" id="invite-nav">Invitation</button>
+            <button class="nav-button" id="tasks-nav">Tasks</button>
+            <button class="nav-button" id="leaderboard-nav">Soon</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

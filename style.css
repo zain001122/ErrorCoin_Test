@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0f1c;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* header code */
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fbbf24; /* Gold color to highlight the title */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: white;
+}
+
+header span {
+    font-weight: bold;
+    color: #10b981; /* Green color to highlight dynamic values */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+    }
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+#mine-button{
+    width: 50px;
+}
+
+.page {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgb(121 115 137);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+}
+
+.page.active {
+    display: block; /* Show when active */
+}
+
+footer {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space buttons evenly */
+    align-items: center; /* Center vertically */
+    background-color: #282c34; /* Background color for footer */
+    padding: 10px; /* Padding for the footer */
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for footer */
+}
+
+.nav-button {
+    flex: 1; /* Allow buttons to grow equally */
+    margin: 0 5px; /* Space between buttons */
+    padding: 10px; /* Padding for buttons */
+    background-color: #61dafb; /* Button color */
+    color: #000; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor pointer on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.nav-button:hover {
+    background-color: #21a1f1; /* Darker shade on hover */
+}
+
+@media (max-width: 600px) {
+    .nav-button {
+        font-size: 14px; /* Smaller font size on small screens */
+        padding: 8px; /* Smaller padding */
+    }
+}
+
+
+#obstacle {
+    font-size: 50px; /* Size of the obstacle emoji */
+    position: absolute; /* Allows for flexible positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the element */
+    display: none; /* Initially hidden */
+    z-index: 10; /* Ensure it's above other elements */
+    transition: opacity 0.5s; /* Smooth transition for appearing/disappearing */
+}
+
+#obstacle.visible {
+    display: block; /* Show the obstacle */
+    opacity: 1; /* Fully visible */
+}
+
+#obstacle.hidden {
+    opacity: 0; /* Fade out */
+}
+
+
+
+#invitation {
+    background: rgb(121 115 137);
+    padding: 40px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px; /* Maximum width for the content */
+    margin: 30px auto; /* Center the content horizontally */
+    text-align: center; /* Center text */
+    color: rgb(0, 0, 0);
+}
+
+h2.txt-1 {
+    font-family: 'Arial', sans-serif; /* Font style */
+    color: #3d3434; /* Dark color for headers */
+    font-size: 2em; /* Font size for main header */
+    margin: 10px 0; /* 10px space from top and bottom */
+}
+
+p.txt-1 {
+    font-family: 'Arial', sans-serif; /* Font style */
+    color: #555; /* Medium dark color for paragraphs */
+    font-size: 1.2em; /* Font size for paragraph */
+    margin: 10px 0; /* 10px space from top and bottom */
+}
+
+#invite-button {
+    background-color: #61dafb; /* Button color */
+    color: #000; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 20px; /* Padding for the button */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Cursor pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    margin: 10px 0; /* 10px space from top and bottom */
+    background: pink;
+}
+
+.invite-button:hover {
+    background-color: #21a1f1; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+h3 {
+    font-family: 'Arial', sans-serif; /* Font style */
+    color: #333; /* Dark color for sub-headers */
+    font-size: 1.5em; /* Font size for sub-headers */
+    margin: 10px 0; /* 10px space from top and bottom */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 10px 0; /* 10px space from top and bottom */
+}
+
+li {
+    background-color: #ffffff; /* White background for list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    margin: 10px 0; /* Space between list items */
+    padding: 10px; /* Padding for list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for list items */
+}
+
+
+@media (max-width: 600px) {
+    #invitation {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    h2.txt-1 {
+        font-size: 1.5em; /* Smaller font size for headers */
+        color: white;
+    }
+
+    p.txt-1 {
+        font-size: 1em; /* Smaller font size for paragraphs */
+        color: white;
+    }
+
+    .invite-button {
+        padding: 10px 15px; /* Smaller padding for buttons */
+        font-size: 0.9em; /* Smaller font size for buttons */
+    }
+
+    h3 {
+        font-size: 1.2em; /* Smaller font size for sub-headers */
+    }
+}
+
+
+
+/* Task management system */
+/* General Styling for the Tasks Page */
+#tasks {
+    background-color: rgb(121 115 137); /* Light background color */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px; /* Maximum width for the content */
+    margin: 20px auto; /* Center the content horizontally */
+    text-align: center; /* Center text */
+}
+
+#tasks h2 {
+    font-family: 'Arial', sans-serif; /* Font style */
+    color: #333; /* Dark color for headers */
+    font-size: 2em; /* Font size for the main header */
+    margin-bottom: 10px; /* Space below the header */
+}
+
+#tasks p {
+    font-family: 'Arial', sans-serif; /* Font style */
+    color: #555; /* Medium dark color for paragraphs */
+    font-size: 1.2em; /* Font size for paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Styling the Task List */
+#tasks-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin-bottom: 20px; /* Space below the task list */
+}
+
+#tasks-list li {
+    background-color: #ffffff; /* White background for list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    margin: 10px 0; /* Space between list items */
+    padding: 10px; /* Padding for list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for list items */
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Space between task text and button */
+    align-items: center; /* Align text and button vertically */
+    font-size: 1em; /* Font size */
+}
+
+/* Task Button Styling */
+.complete-task-button {
+    background-color: #61dafb; /* Button color */
+    color: #000; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 15px; /* Padding for the button */
+    font-size: 0.9em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.complete-task-button:hover {
+    background-color: #21a1f1; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Tasks Completed Counter Styling */
+#tasks-completed {
+    font-weight: bold; /* Bold the counter */
+    color: #333; /* Dark color */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    #tasks {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    #tasks h2 {
+        font-size: 1.5em; /* Smaller font size for headers */
+    }
+
+    #tasks p {
+        font-size: 1em; /* Smaller font size for paragraphs */
+    }
+
+    #tasks-list li {
+        font-size: 0.9em; /* Smaller font size for list items */
+        flex-direction: column; /* Stack task text and button vertically */
+        align-items: flex-start; /* Align text and button to the left */
+    }
+
+    .complete-task-button {
+        margin-top: 10px; /* Add space above the button */
+        align-self: center; /* Center the button on mobile */
+    }
+}
+
+.complete-task-button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+#leaderboard-nav{
+    background-color: #555;
+}
